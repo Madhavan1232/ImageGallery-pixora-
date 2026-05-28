@@ -1,0 +1,20 @@
+{
+  "name": "pixora",
+  "version": "1.0.0",
+  "description": "Pixora – Premium Black & White Image Gallery",
+  "scripts": {
+    "backend": "cd pixora-backend && node src/index.js",
+    "frontend": "cd pixora-frontend && npm run dev",
+    "dev": "start cmd /k \"cd pixora-backend && node src/index.js\" && cd pixora-frontend && npm run dev",
+    "install:all": "cd pixora-backend && npm install && cd ../pixora-frontend && npm install"
+  },
+  "keywords": [
+    "gallery",
+    "images",
+    "pixora"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  }
+}

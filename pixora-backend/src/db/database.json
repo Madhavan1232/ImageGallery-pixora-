@@ -1,0 +1,185 @@
+{
+  "users": [
+    {
+      "id": "test-id",
+      "username": "verifyuser",
+      "email": "verify@example.com",
+      "password": "hash",
+      "avatar": "avatar",
+      "createdAt": "2026-05-22T07:34:59.585Z"
+    },
+    {
+      "id": "d5c35e07-a56e-474a-a4cb-dca2fc828d4f",
+      "username": "testuser2",
+      "email": "testuser2@example.com",
+      "password": "$2b$12$6ov9UsbOWiv90i7.Ty3GyOgmp.H79sToJsHOuD3GrzEJbMcozC.Hm",
+      "createdAt": "2026-05-22T07:35:19.638Z",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=testuser2&backgroundColor=000000&textColor=ffffff"
+    },
+    {
+      "id": "5627b818-ac0d-4c00-b873-9a3fce1ddaac",
+      "username": "testuser0522",
+      "email": "testuser0522@example.com",
+      "password": "$2b$12$SCRHbQ5jepZIUrVTZP7TIe.urbednquZDGRFiJHwPao2EoSgGgXtO",
+      "createdAt": "2026-05-22T07:37:08.053Z",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=testuser0522&backgroundColor=000000&textColor=ffffff"
+    },
+    {
+      "id": "f501a6cb-66fc-432c-b27c-2b83189a61fd",
+      "username": "madhavanvairavan3@gmail.com",
+      "email": "madhavanvairavan3@gmail.com",
+      "password": "$2b$12$HCqZKQivnW/c1kdU9bR03eHnN4dBwJrjxL9KE3G3Kc9AxwS6rdZlK",
+      "createdAt": "2026-05-22T07:44:15.237Z",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=madhavanvairavan3%40gmail.com&backgroundColor=000000&textColor=ffffff"
+    },
+    {
+      "id": "8eb575bd-df60-440b-a3d4-d4f455d4f65a",
+      "username": "testgoogle",
+      "email": "test.google@example.com",
+      "password": "$2b$12$lYC.OXKsXD78VyWohyszCez.267oMtcpal/X.4nsXRijFPFBGylt2",
+      "createdAt": "2026-05-22T08:13:23.202Z",
+      "avatar": "https://example.com/p.jpg"
+    },
+    {
+      "id": "342e8048-1d2c-4074-920a-40e3b96107a0",
+      "username": "testgoogle2",
+      "email": "test.google2@example.com",
+      "password": "$2b$12$AgCniqxA2hYdejNDaQxR6OpUffRex6MitkSOlL7ZNS8u0LYFsCJdK",
+      "createdAt": "2026-05-22T08:13:34.908Z",
+      "avatar": "https://example.com/p2.jpg"
+    },
+    {
+      "id": "e4aa9be6-9745-43b3-ac07-bd77bdc0f676",
+      "username": "madhavanvairavan3@gmail.com",
+      "email": "madhavanvairavan31@gmail.com",
+      "password": "$2b$12$rN3Lk6Iy/e2yvy30FyZ/ROrSQa/CpSgjbK2lmyIo8WhxnR/yJfkzG",
+      "createdAt": "2026-05-22T15:27:57.716Z",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=madhavanvairavan3%40gmail.com&backgroundColor=000000&textColor=ffffff"
+    },
+    {
+      "id": "186528eb-dae4-4a73-a605-580ec4f6f86b",
+      "username": "e2e_1779465635",
+      "email": "e2e_1779465635@example.com",
+      "password": "$2b$12$NN.7maT7QGfbnEdHbOQKQ.tJ6kSGGy2zX5LIv9YjIA6Ak.w2YsMF2",
+      "createdAt": "2026-05-22T16:00:34.924Z",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=e2e_1779465635&backgroundColor=000000&textColor=ffffff"
+    },
+    {
+      "id": "6e810559-008f-40d2-9bd1-41caca0d9966",
+      "username": "e2e2_1779465643",
+      "email": "e2e2_1779465643@example.com",
+      "password": "$2b$12$xlhCl6QqZQI0azxjFcWDT.Bv8sJtUXfVmL/yHBdj./YsLblYcZG..",
+      "createdAt": "2026-05-22T16:00:43.667Z",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=e2e2_1779465643&backgroundColor=000000&textColor=ffffff"
+    }
+  ],
+  "likes": {
+    "test-id": [],
+    "d5c35e07-a56e-474a-a4cb-dca2fc828d4f": [],
+    "5627b818-ac0d-4c00-b873-9a3fce1ddaac": [],
+    "f501a6cb-66fc-432c-b27c-2b83189a61fd": [],
+    "8eb575bd-df60-440b-a3d4-d4f455d4f65a": [],
+    "342e8048-1d2c-4074-920a-40e3b96107a0": [],
+    "e4aa9be6-9745-43b3-ac07-bd77bdc0f676": [
+      "pexels_7799011",
+      "unsplash_v54wV0e2oFQ"
+    ],
+    "186528eb-dae4-4a73-a605-580ec4f6f86b": [],
+    "6e810559-008f-40d2-9bd1-41caca0d9966": [
+      "unsplash_JgOeRuGD_Y4"
+    ]
+  },
+  "likeData": {
+    "6e810559-008f-40d2-9bd1-41caca0d9966": {},
+    "e4aa9be6-9745-43b3-ac07-bd77bdc0f676": {
+      "unsplash_v54wV0e2oFQ": {
+        "id": "unsplash_v54wV0e2oFQ",
+        "source": "unsplash",
+        "url": "https://images.unsplash.com/photo-1587120511358-98f9104cc096?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTYyNzl8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc3OTM4MzQzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+        "thumb": "https://images.unsplash.com/photo-1587120511358-98f9104cc096?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTYyNzl8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc3OTM4MzQzMHww&ixlib=rb-4.1.0&q=80&w=400",
+        "full": "https://images.unsplash.com/photo-1587120511358-98f9104cc096?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5NTYyNzl8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc3OTM4MzQzMHww&ixlib=rb-4.1.0&q=85",
+        "download": "https://unsplash.com/photos/v54wV0e2oFQ/download?ixid=M3w5NTYyNzl8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc3OTM4MzQzMHww",
+        "width": 3872,
+        "height": 2592,
+        "color": "#59a6c0",
+        "description": "Creative Process using Procreate for iPad",
+        "author": "Nik",
+        "authorUsername": "helloimnik",
+        "authorProfile": "https://unsplash.com/@helloimnik",
+        "likes": 32,
+        "tags": []
+      }
+    },
+    "f501a6cb-66fc-432c-b27c-2b83189a61fd": {}
+  },
+  "bookmarks": {
+    "test-id": [],
+    "d5c35e07-a56e-474a-a4cb-dca2fc828d4f": [],
+    "5627b818-ac0d-4c00-b873-9a3fce1ddaac": [],
+    "f501a6cb-66fc-432c-b27c-2b83189a61fd": [
+      "pexels_7130567"
+    ],
+    "8eb575bd-df60-440b-a3d4-d4f455d4f65a": [],
+    "342e8048-1d2c-4074-920a-40e3b96107a0": [],
+    "e4aa9be6-9745-43b3-ac07-bd77bdc0f676": [
+      "pexels_7799011"
+    ],
+    "186528eb-dae4-4a73-a605-580ec4f6f86b": [],
+    "6e810559-008f-40d2-9bd1-41caca0d9966": [
+      "unsplash_JgOeRuGD_Y4"
+    ]
+  },
+  "bookmarkData": {
+    "test-id": {},
+    "d5c35e07-a56e-474a-a4cb-dca2fc828d4f": {},
+    "5627b818-ac0d-4c00-b873-9a3fce1ddaac": {},
+    "f501a6cb-66fc-432c-b27c-2b83189a61fd": {
+      "pexels_7130567": {
+        "id": "pexels_7130567",
+        "source": "pexels",
+        "url": "https://images.pexels.com/photos/7130567/pexels-photo-7130567.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "thumb": "https://images.pexels.com/photos/7130567/pexels-photo-7130567.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "full": "https://images.pexels.com/photos/7130567/pexels-photo-7130567.jpeg",
+        "download": "https://images.pexels.com/photos/7130567/pexels-photo-7130567.jpeg",
+        "width": 4000,
+        "height": 6000,
+        "color": "#E3D5EC",
+        "description": "A vibrant pastel gradient creates a soothing and artistic digital background.",
+        "author": "Codioful (formerly Gradienta)",
+        "authorUsername": "@codioful",
+        "authorProfile": "https://www.pexels.com/@codioful",
+        "likes": 831,
+        "tags": []
+      }
+    },
+    "8eb575bd-df60-440b-a3d4-d4f455d4f65a": {},
+    "342e8048-1d2c-4074-920a-40e3b96107a0": {},
+    "e4aa9be6-9745-43b3-ac07-bd77bdc0f676": {
+      "pexels_7799011": {
+        "id": "pexels_7799011",
+        "source": "pexels",
+        "url": "https://images.pexels.com/photos/7799011/pexels-photo-7799011.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "thumb": "https://images.pexels.com/photos/7799011/pexels-photo-7799011.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "full": "https://images.pexels.com/photos/7799011/pexels-photo-7799011.jpeg",
+        "download": "https://images.pexels.com/photos/7799011/pexels-photo-7799011.jpeg",
+        "width": 6146,
+        "height": 4609,
+        "color": "#49212A",
+        "description": "Colorful abstract art piece featuring vivid geometric patterns and multicolored stripes.",
+        "author": "Steve A Johnson",
+        "authorUsername": "@steve",
+        "authorProfile": "https://www.pexels.com/@steve",
+        "likes": 232,
+        "tags": []
+      }
+    },
+    "186528eb-dae4-4a73-a605-580ec4f6f86b": {},
+    "6e810559-008f-40d2-9bd1-41caca0d9966": {}
+  },
+  "followers": {},
+  "following": {},
+  "images": [],
+  "comments": {},
+  "activities": {},
+  "reports": []
+}
