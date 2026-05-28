@@ -41,6 +41,9 @@ app.use('/api/images', imagesRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/support', supportRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Pixora backend running successfully");
+});
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Pixora API is running', timestamp: new Date().toISOString() });
