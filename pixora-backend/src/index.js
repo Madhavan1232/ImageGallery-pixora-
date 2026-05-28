@@ -63,9 +63,9 @@ initDB()
       const unsplash = process.env.UNSPLASH_ACCESS_KEY && process.env.UNSPLASH_ACCESS_KEY !== 'your_unsplash_access_key_here';
       const pexels   = process.env.PEXELS_API_KEY   && process.env.PEXELS_API_KEY   !== 'your_pexels_api_key_here';
       const pixabay  = process.env.PIXABAY_API_KEY  && process.env.PIXABAY_API_KEY  !== 'your_pixabay_api_key_here';
-      const mysqlEnabled = process.env.MYSQL_HOST && process.env.MYSQL_USER && process.env.MYSQL_DATABASE;
+      const postgresEnabled = process.env.DATABASE_URL;
       console.log(`\n🖤 Pixora API running on http://localhost:${PORT}`);
-      console.log(`💾 Database : ${mysqlEnabled ? '✅ MySQL' : '⚠️ JSON file fallback'}`);
+      console.log(`💾 Database : ${postgresEnabled ? '✅ PostgreSQL (Neon)' : '⚠️ JSON file fallback'}`);
       console.log(`📸 Active sources:`);
       console.log(`   Unsplash : ${unsplash ? '✅ (50 req/hr, 10 req/s)' : '❌ no key'}`);
       console.log(`   Pexels   : ${pexels   ? '✅ (200 req/hr)' : '❌ no key'}`);
