@@ -80,7 +80,8 @@ export default function LoginPage() {
           avatar: userInfo.data.picture,
         };
 
-        const resp = await axios.post('http://localhost:5000/api/auth/google', payload);
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+        const resp = await axios.post(`${API_URL}/auth/google`, payload);
         if (resp?.data?.token) {
           setSession(resp.data.user, resp.data.token);
           toast.success(`Signed in with Google as ${resp.data.user.username || resp.data.user.email}`);

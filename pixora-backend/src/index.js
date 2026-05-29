@@ -16,7 +16,12 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin: (origin, cb) => {
     if (!origin) return cb(null, true);
+    // Allow localhost for development
     if (/^https?:\/\/(localhost|127\.0\.0\.1):\d+$/.test(origin)) {
+      return cb(null, true);
+    }
+    // Allow Azure Static Web Apps frontend
+    if (origin === 'https://pixorafrontend.z29.web.core.windows.net') {
       return cb(null, true);
     }
     return cb(new Error('Not allowed by CORS'));

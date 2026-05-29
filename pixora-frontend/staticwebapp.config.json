@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "route": "/assets/*",
+      "serve": "/assets/*",
+      "statusCode": 200
+    },
+    {
+      "route": "/*.svg",
+      "serve": "/*.svg",
+      "statusCode": 200
+    },
+    {
+      "route": "/*.ico",
+      "serve": "/*.ico",
+      "statusCode": 200
+    },
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
+    }
+  ],
+  "mimeTypes": {
+    ".svg": "image/svg+xml",
+    ".woff": "font/woff",
+    ".woff2": "font/woff2"
+  }
+}
