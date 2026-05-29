@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '22.x'
 
-      - name: npm install
+      - name: npm install, build, and test
         run: |
               cd pixora-backend
               npm install
@@ -50,9 +50,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5A35A7AF80C8451EBD3A303BE2EAF30B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_41E5A953BFBD4555A1BDB87B6EDD1279 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_B6042AD400194E4B932AB345BE733DB1 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1E41D4D4EC544B89983D89C548FF79CE }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A49541F2F4BC4AB48A186813D7C8B3AF }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9787764EDEC14F7CA80DC9FDBD41C249 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
