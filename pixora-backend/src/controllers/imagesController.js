@@ -1,26 +1,55 @@
-const axios = require('axios');
+const { retryAxiosRequest } = require('../utils/retryAxios');
+const { RequestPool } = require('../utils/requestPool');
+const { CircuitBreaker } = require('../utils/circuitBreaker');
+const { LRUCache, CACHE_TTL_LONG, CACHE_TTL_SHORT } = require('../utils/cache');
+const { updateRateLimitState } = require('../middleware/rateLimitTracker');
 const { listImages } = require('../utils/db');
 
-// ─── Simple in-memory cache (avoids hammering external APIs) ─────────────────
-const cache = new Map();
-const CACHE_TTL_MS = 2 * 60 * 1000; // 2 minutes
+// ════════════════════════════════════════════════════════════════════════════
+// CONFIGURATION
+// ════════════════════════════════════════════════════════════════════════════
 
-function cacheGet(key) {
-  const entry = cache.get(key);
-  if (!entry) return null;
-  if (Date.now() - entry.ts > CACHE_TTL_MS) { cache.delete(key); return null; }
-  return entry.data;
-}
-function cacheSet(key, data) {
-  cache.set(key, { data, ts: Date.now() });
-  // Auto-evict old entries to prevent memory bloat
-  if (cache.size > 200) {
-    const oldest = [...cache.entries()].sort((a, b) => a[1].ts - b[1].ts)[0];
-    if (oldest) cache.delete(oldest[0]);
-  }
+// Request pooling - max 4 concurrent to not overwhelm Azure F1's single core
+const apiPool = new RequestPool(4);
+
+// Cache with 20MB limit for Azure F1 (165MB RAM)
+const imageCache = new LRUCache(20);
+
+// ════════════════════════════════════════════════════════════════════════════
+// CIRCUIT BREAKERS - prevent cascading failures
+// ════════════════════════════════════════════════════════════════════════════
+
+let unsplashBreaker, pexelsBreaker, pixabayBreaker, picsumBreaker;
+
+function initializeCircuitBreakers() {
+  unsplashBreaker = new CircuitBreaker('Unsplash', fetchUnsplashImpl, {
+    threshold: 5,
+    timeout: 30000,
+  });
+  pexelsBreaker = new CircuitBreaker('Pexels', fetchPexelsImpl, {
+    threshold: 5,
+    timeout: 30000,
+  });
+  pixabayBreaker = new CircuitBreaker('Pixabay', fetchPixabayImpl, {
+    threshold: 5,
+    timeout: 30000,
+  });
+  picsumBreaker = new CircuitBreaker('Picsum', fetchPicsumImpl, {
+    threshold: 5,
+    timeout: 30000,
+  });
 }
 
-const CATEGORIES = [
+// Initialize on module load
+initializeCircuitBreakers();
+
+const TIMEOUT_CONFIG = {
+  external: 5000,
+  database: 10000,
+  search: 3000,
+};
+
+const MIN_WIDTH = 900;
   { id: 'all',          label: 'All',          query: '' },
   { id: 'nature',       label: 'Nature',       query: 'nature' },
   { id: 'architecture', label: 'Architecture', query: 'architecture' },

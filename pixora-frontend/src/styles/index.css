@@ -162,8 +162,8 @@ body {
 }
 
 .navbar__logo-icon {
-  width: 112%;
-  height: 112%;
+  width: 115%;
+  height: 115%;
   display: block;
   object-fit: contain;
   transform: scale(1.04);
